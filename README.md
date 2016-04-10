@@ -9,6 +9,7 @@ The database consists of 3 nodes for Candidate, Constituency and Party. It also 
 
 ###Candidates
 | Name         | Name of the Candidate     |
+|------------------------------------------|
 | Party        | Candidates Party          |
 | Constituency | Area Candidate is Running |
 | Gender       | Sex of the Candidate      |
