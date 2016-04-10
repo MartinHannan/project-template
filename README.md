@@ -65,6 +65,6 @@ The browser is telling you that:
 "
 ## References
 1. [Neo4J website](http://neo4j.com/), the website of the Neo4j database.
-2. http://www.thejournal.ie/election-2016/constituency/16/
+2. http://www.thejournal.ie/election-2016
 2. http://elections.independent.ie/election-2016/kildare-south
 2. http://stackoverflow.com/questions/33352673/why-does-neo4j-warn-this-query-builds-a-cartesian-product-between-disconnected
