@@ -37,7 +37,7 @@ MATCH
 RETURN
 	Bacon;
 ```
-##### Notes
+### Notes
 Through some research into some warnings I was getting while building queries I found some interesting answers.
 One such warning was the following
 "This query builds a cartesian product between disconnected patterns. If a part of a query contains multiple disconnected patterns, this will build a cartesian product between all those parts. This may produce a large amount of data and slow down query processing. While occasionally intended, it may often be possible to reformulate the query that avoids the use of this cross product, perhaps by adding a relationship between the different parts or by using OPTIONAL MATCH (identifier is: (c))."
