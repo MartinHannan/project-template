@@ -1,0 +1,4 @@
+MATCH 
+    (c:Candidate)
+RETURN 
+   min(c.Age) AS Youngest_Candidate, c.Constituency

@@ -1,0 +1,5 @@
+match (a:Candidate)
+with a
+match(b:Party)
+where a.Tag = b.Tag
+create(a)-[r:Member_Of]->(b)

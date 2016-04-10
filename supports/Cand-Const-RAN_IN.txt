@@ -1,0 +1,5 @@
+match (a:Candidate)
+with a
+match(b:Constituency)
+where a.RanIn = b.Tag
+create(a)-[r:Ran_In]->(b)

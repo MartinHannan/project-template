@@ -1,0 +1,5 @@
+match (a:Candidate)
+with a
+match(b:Constituency)
+where a.Won = b.Tag
+create(a)-[r:Won_Seat_In]->(b)

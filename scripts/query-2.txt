@@ -1,0 +1,3 @@
+MATCH (joan:Candidate { Name:"Joan Burton" }),(mick:Candidate { Name:"Mick Wallace" }),
+  p = shortestPath((joan)-[*..15]-(mick))
+RETURN p

@@ -1,0 +1,3 @@
+match (a:Candidate),(b:Constituency)
+where a.Tag = "sd" AND a.Won = b.Tag
+return a,b;
