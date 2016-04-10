@@ -8,36 +8,36 @@ As part of my Graph Theory module I was asked to construct a Graph Database usin
 The database consists of 3 nodes for Candidate, Constituency and Party. It also has 3 relationships "Won_Seat_In","Ran_In" and "Member_Of". A Candidate "Ran_In" a constituency and possibly "Won_Seat_In" that constituency. A Candidate is also a "Member_Of" a political party or is an independant which is also listed in the Party node.
 
 ###Candidates
-| Name         | Name of the Candidate     |
-|------------------------------------------|
-| Party        | Candidates Party          |
-| Constituency | Area Candidate is Running |
-| Gender       | Sex of the Candidate      |
-| Occupation   | Candidate Occupation      |
-| Age          | Age of Candidate          |
-| RanIN        | Tag for the Constituency  |
-| Won          | If they won a seat        |
+Name         | Name of the Candidate     
+
+ Party        | Candidates Party          
+ Constituency | Area Candidate is Running  
+ Gender       | Sex of the Candidate      
+ Occupation   | Candidate Occupation      
+ Age          | Age of Candidate          
+ RanIN        | Tag for the Constituency  
+ Won          | If they won a seat        
 
 ###Constituency
-| Name         | Name of the Constituency  	|
-| Tag          | Tag for the Constituency  	|
-| Electorate   | Number of Voter	   	|
-| Seats        | Seats Available           	|
-| TotalPoll    | Number of Voters who Voted	|
-| Turnout      | Percentage of TotalPoll   	|
-| ValidPoll    | Valid Votes		   	|
-| SpoiledVotes | Bad Vote	           	|
-| Quot	       | Required amount to get a seat  |
+ Name         | Name of the Constituency  	
+ Tag          | Tag for the Constituency  	
+ Electorate   | Number of Voter	   	
+ Seats        | Seats Available           	
+ TotalPoll    | Number of Voters who Voted	
+ Turnout      | Percentage of TotalPoll   	
+ ValidPoll    | Valid Votes		   	
+ SpoiledVotes | Bad Vote	           	
+ Quot	       | Required amount to get a seat  
 
 ###Party
-| Name         | Name of the Party  	|
-| Tag          | Tag for the Party  	|
-| Leader       | Current Party Leader	|
-| Translation  | English Translation    |
-| Founded      | Year Founded		|
-| Founder      | Name of Founder  	|
-| Ideology     | Political Ideal  	|
-| Position     | Left-Right Spectrum	|
+ Name         | Name of the Party  	
+ Tag          | Tag for the Party  	
+ Leader       | Current Party Leader	
+ Translation  | English Translation    
+ Founded      | Year Founded		
+ Founder      | Name of Founder  	
+ Ideology     | Political Ideal  	
+ Position     | Left-Right Spectrum	
 
 
 
