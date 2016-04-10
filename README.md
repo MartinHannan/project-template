@@ -7,35 +7,66 @@ As part of my Graph Theory module I was asked to construct a Graph Database usin
 ## Database
 The database consists of 3 nodes for Candidate, Constituency and Party. It also has 3 relationships "Won_Seat_In","Ran_In" and "Member_Of". A Candidate "Ran_In" a constituency and possibly "Won_Seat_In" that constituency. A Candidate is also a "Member_Of" a political party or is an independant which is also listed in the Party node.
 
+###Candidates
+| Name         | Name of the Candidate     |
+| Party        | Candidates Party          |
+| Constituency | Area Candidate is Running |
+| Gender       | Sex of the Candidate      |
+| Occupation   | Candidate Occupation      |
+| Age          | Age of Candidate          |
+| RanIN        | Tag for the Constituency  |
+| Won          | If they won a seat        |
+
+###Constituency
+| Name         | Name of the Constituency  	|
+| Tag          | Tag for the Constituency  	|
+| Electorate   | Number of Voter	   	|
+| Seats        | Seats Available           	|
+| TotalPoll    | Number of Voters who Voted	|
+| Turnout      | Percentage of TotalPoll   	|
+| ValidPoll    | Valid Votes		   	|
+| SpoiledVotes | Bad Vote	           	|
+| Quot	       | Required amount to get a seat  |
+
+###Party
+| Name         | Name of the Party  	|
+| Tag          | Tag for the Party  	|
+| Leader       | Current Party Leader	|
+| Translation  | English Translation    |
+| Founded      | Year Founded		|
+| Founder      | Name of Founder  	|
+| Ideology     | Political Ideal  	|
+| Position     | Left-Right Spectrum	|
+
+
+
+
 ## Queries
-Summarise your three queries here.
-Then explain them one by one in the following sections.
+Here are my 3 queries that I found to be interesting.
 
-#### Query one title
-This query retreives the Bacon number of an actor...
+#### Youngest Candidate per Constituency
+This query retreives the age of youngest candidate running in each Constituency
 ```cypher
-MATCH
-	(Bacon)
-RETURN
-	Bacon;
+MATCH 
+    (c:Candidate)
+RETURN 
+   min(c.Age) AS Youngest_Candidate, c.Constituency
 ```
 
-#### Query two title
-This query retreives the Bacon number of an actor...
+#### Shortest Path
+This query finds the shorts path between Joan Burton and Mick Wallace
 ```cypher
-MATCH
-	(Bacon)
-RETURN
-	Bacon;
+MATCH (joan:Candidate { Name:"Joan Burton" }),(mick:Candidate { Name:"Mick Wallace" }),
+  p = shortestPath((joan)-[*..15]-(mick))
+RETURN p
 ```
 
-#### Query three title
-This query retreives the Bacon number of an actor...
+#### Social Democrat Wins
+Lists all the Social Democrat who won seats and the constituency that they won it in.
 ```cypher
-MATCH
-	(Bacon)
-RETURN
-	Bacon;
+match (a:Candidate),(b:Constituency)
+where a.Tag = "sd" AND a.Won = b.Tag
+return a,b;
 ```
 ### Notes
 Through some research into some warnings I was getting while building queries I found some interesting answers.
