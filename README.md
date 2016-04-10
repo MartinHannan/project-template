@@ -20,6 +20,8 @@ Title | Description
  Won|If they won a seat        
 
 ###Constituency
+Title | Description
+| --- | --- |
  Name         | Name of the Constituency  	
  Tag          | Tag for the Constituency  	
  Electorate   | Number of Voter	   	
@@ -31,6 +33,8 @@ Title | Description
  Quot	       | Required amount to get a seat  
 
 ###Party
+Title | Description
+| --- | --- |
  Name         | Name of the Party  	
  Tag          | Tag for the Party  	
  Leader       | Current Party Leader	
